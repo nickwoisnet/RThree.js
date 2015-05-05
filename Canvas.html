@@ -5,13 +5,13 @@
 <body>
 	<canvas id="ViewPort" width="500" height="400"></canvas>
 	<h3>Math Palette</h3>
+	<script type="text/javascript">var Elements = [];</script>
 	<script type="text/javascript" src="Point.js"></script>
 	<script type="text/javascript" src="PointSample.js"></script>
 	<script type="text/javascript">
 		var context = document.getElementById("ViewPort").getContext("2d");
-		for (var i = 0; i < Points.length; i++) {
-			context.fillStyle = Points[i].Color;
-			context.fillRect(Points[i].X,Points[i].Y,1,1);
+		for (var i = 0; i < Elements.length; i++) {
+			Elements[i].Draw(context);
 		}
 	</script>
 </body>

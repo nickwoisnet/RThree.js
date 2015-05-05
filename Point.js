@@ -7,4 +7,8 @@ function Point (X,Y,Z,Color) {
 	self.Y = Y;
 	self.Z = Z;
 	self.Color = Color;
+	self.Draw = function (context) {
+		context.fillStyle = self.Color;
+		context.fillRect(self.X,self.Y,1,1);
+	}
 }
