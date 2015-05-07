@@ -12,7 +12,7 @@ function LineSegment2D (s,e,c) {
 		var p = self.start;
 		var c = 0;
 		debugger;
-		while(p[0][0] < e[0][0]) {
+		while(!(p[0][0] <= e[0][0] + 1 && p[0][0] >= e[0][0] - 1)) {
 			p = MatrixAddSub(self.start,MatrixScalarMult(self.unitMat,c++),function(x,y) {return x + y;});
 			context.fillRect(p[0][0],p[0][1],1,1);
 		}
