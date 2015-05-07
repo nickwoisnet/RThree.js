@@ -6,7 +6,7 @@ function LineSegment2D (s,e,c) {
 	self.end = e;
 	self.color = c;
 	self.Draw = function (context) {
-		context.fillStyle = self.Color;
+		context.fillStyle = self.color;
 		// p' = p + unitMat * t
 		//convention needed: s < e
 		var p = self.start;
