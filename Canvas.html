@@ -5,9 +5,19 @@
 <body>
 	<canvas id="ViewPort" width="500" height="400"></canvas>
 	<h3>Math Palette</h3>
+	<h4>Line</h4>
+	<label>Start x</label><input type="text"/>
+	<label>Start y</label><input type="text"/>
+	<label>End x</label><input type="text"/>
+	<label>End y</label><input type="text"/>
+	<button onclick="CreateLine()">Draw</button>
 	<script type="text/javascript">var Elements = [];</script>
 	<script type="text/javascript" src="Point.js"></script>
 	<script type="text/javascript" src="PointSample.js"></script>
+	<script type="text/javascript" src="Matrix.js"></script>
+	<script type="text/javascript" src="MatrixSample.js"></script>
+	<script type="text/javascript" src="Line.js"></script>
+	<script type="text/javascript" src="LineSample.js"></script>
 	<script type="text/javascript">
 		var context = document.getElementById("ViewPort").getContext("2d");
 		for (var i = 0; i < Elements.length; i++) {
