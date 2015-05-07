@@ -1,7 +1,7 @@
 function LineSegment2D (s,e,c) {
 	debugger;
 	var self = this;
-	self.unitMat = MatrixUnit(s,e);
+	self.unitMat = MatrixUnit(MatrixAddSub(e,s,function(x,y) {return x - y;}));
 	self.start = s;
 	self.end = e;
 	self.color = c;
