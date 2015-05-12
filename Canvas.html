@@ -11,10 +11,9 @@
 	<label>End x</label><input type="text"/>
 	<label>End y</label><input type="text"/>
 	<h4>Translation Matrix</h4>
-	<input type="text" value="1"/><input type="text" value="0"/><input type="text" value="0"/><input type="text" value="a"/><br/>
-	<input type="text" value="0"/><input type="text" value="1"/><input type="text" value="0"/><input type="text" value="b"/><br/>
-	<input type="text" value="0"/><input type="text" value="0"/><input type="text" value="1"/><input type="text" value="c"/><br/>
-	<input type="text" value="0"/><input type="text" value="0"/><input type="text" value="0"/><input type="text" value="1"/><br/>
+	<input type="text" value="1"/><input type="text" value="0"/><input id="TranslationA" type="text" style="background-color: yellow;" value="a"/><br/>
+	<input type="text" value="0"/><input type="text" value="1"/><input id="TranslationB" type="text" style="background-color: yellow;" value="b"/><br/>
+	<input type="text" value="0"/><input type="text" value="0"/><input type="text" value="1"/><br/>
 	<button onclick="TranslateWorld2D()">Apply Translation</button>
 	<button onclick="CreateLine()">Draw</button>
 	<script type="text/javascript">var Elements = [];</script>

@@ -1,7 +1,7 @@
 function TranslateWorld2D() {
 	debugger;
-	var a = 1;
-	var b = 0;
+	var a = parseInt(document.getElementById('TranslationA').value);
+	var b = parseInt(document.getElementById('TranslationB').value);
 	var mat1 = [
 				[1,0,a],
 				[0,1,b],
