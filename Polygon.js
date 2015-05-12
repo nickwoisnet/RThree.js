@@ -15,4 +15,14 @@ function Polygon (points,color) {
 			}
 		}
 	}
+	self.Fill = function (context) {
+		context.fillStyle = self.Color;
+		//take 3 pts at a time
+		for (var i = 0; i < points.length; i+=3) {
+			self.FillTriangle(points[i],points[i+1],points[i+2]);
+		}
+	}
+	self.FillTriangle = function (a,b,c) {
+		
+	}
 }

@@ -10,6 +10,12 @@
 	<label>Start y</label><input type="text"/>
 	<label>End x</label><input type="text"/>
 	<label>End y</label><input type="text"/>
+	<h4>Translation Matrix</h4>
+	<input type="text" value="1"/><input type="text" value="0"/><input type="text" value="0"/><input type="text" value="a"/><br/>
+	<input type="text" value="0"/><input type="text" value="1"/><input type="text" value="0"/><input type="text" value="b"/><br/>
+	<input type="text" value="0"/><input type="text" value="0"/><input type="text" value="1"/><input type="text" value="c"/><br/>
+	<input type="text" value="0"/><input type="text" value="0"/><input type="text" value="0"/><input type="text" value="1"/><br/>
+	<button onclick="TranslateWorld2D()">Apply Translation</button>
 	<button onclick="CreateLine()">Draw</button>
 	<script type="text/javascript">var Elements = [];</script>
 	<script type="text/javascript" src="Point.js"></script>
@@ -20,10 +26,16 @@
 	<script type="text/javascript" src="LineSample.js"></script>
 	<script type="text/javascript" src="Polygon.js"></script>
 	<script type="text/javascript" src="PolygonSample.js"></script>
+	<script type="text/javascript" src="Translation.js"></script>
 	<script type="text/javascript">
 		var context = document.getElementById("ViewPort").getContext("2d");
 		for (var i = 0; i < Elements.length; i++) {
 			Elements[i].Draw(context);
+		}
+		function DrawWorld () {
+			for (var i = 0; i < Elements.length; i++) {
+				Elements[i].Draw(context);
+			}
 		}
 	</script>
 </body>

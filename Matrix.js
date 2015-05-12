@@ -12,6 +12,20 @@ function MatrixMultiplication(mat1, mat2) {
 	return mat3;
 }
 
+function MatrixColumnMultiplication(mat1, mat2) {
+	//check if mat1 and mat2 can be multiplied together
+	//Important Note: mat1 * mat2 <> mat2 * mat1
+	var mat3 = [];
+	for (var i = 0; i < mat1.length; i++) {
+		var temp = [];
+		for (var j = 0; j < mat2.length; j++) {
+			temp.push(DotProduct(mat1[i],[mat2[j]]));
+		}
+		mat3.push(temp);
+	}
+	return mat3;
+}
+
 function GetColumnMatrix(mat, j) {
 	var colMat = [];
 	for (var i = 0; i < mat.length; i++) {
