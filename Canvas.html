@@ -33,6 +33,8 @@
 			Elements[i].Draw(context);
 		}
 		function DrawWorld () {
+			var canvas = document.getElementById("ViewPort");
+			context.clearRect(0, 0, canvas.width, canvas.height);
 			for (var i = 0; i < Elements.length; i++) {
 				Elements[i].Draw(context);
 			}
