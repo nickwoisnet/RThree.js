@@ -10,15 +10,15 @@ function TranslateWorld2D() {
 		for (var j = 0; j < Elements[i].Points.length; j++) {
 				var e1 = [Elements[i].Points[j].pop()];
 				var e2 = [Elements[i].Points[j].pop()];
-				Elements[i].Points[j].push(e1);
 				Elements[i].Points[j].push(e2);
+				Elements[i].Points[j].push(e1);
 				Elements[i].Points[j].push([1]);
 				Elements[i].Points[j] = MatrixMultiplication(mat1, Elements[i].Points[j]);
 				Elements[i].Points[j].pop();
 				e1 = Elements[i].Points[j].pop().pop();
 				e2 = Elements[i].Points[j].pop().pop();
-				Elements[i].Points[j].push(e1);
 				Elements[i].Points[j].push(e2);
+				Elements[i].Points[j].push(e1);
 
 			}
 	}
