@@ -1,10 +1,12 @@
-function TranslateWorld2D() {
+function RotateWorld2D() {
 	debugger;
-	var a = parseFloat(document.getElementById('TranslationA').value);
-	var b = parseFloat(document.getElementById('TranslationB').value);
+	var a = parseFloat(document.getElementById('RotationAlpha').value);
+	var b = a;
+	var c = a;
+	var d = a;
 	var mat1 = [
-				[1,0,a],
-				[0,1,b],
+				[Math.cos(a),-Math.sin(b),0],
+				[Math.sin(c),Math.cos(d),0],
 				[0,0,1]  		];
 	for (var i = 0; i < Elements.length; i++) {
 		for (var j = 0; j < Elements[i].Points.length; j++) {

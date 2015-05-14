@@ -1,10 +1,10 @@
-function TranslateWorld2D() {
+function ScaleWorld2D() {
 	debugger;
-	var a = parseFloat(document.getElementById('TranslationA').value);
-	var b = parseFloat(document.getElementById('TranslationB').value);
+	var a = parseFloat(document.getElementById('ScaleA').value);
+	var b = parseFloat(document.getElementById('ScaleB').value);
 	var mat1 = [
-				[1,0,a],
-				[0,1,b],
+				[a,0,0],
+				[0,b,0],
 				[0,0,1]  		];
 	for (var i = 0; i < Elements.length; i++) {
 		for (var j = 0; j < Elements[i].Points.length; j++) {

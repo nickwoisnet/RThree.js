@@ -15,6 +15,17 @@
 	<input type="text" value="0"/><input type="text" value="1"/><input id="TranslationB" type="text" style="background-color: yellow;" value="b"/><br/>
 	<input type="text" value="0"/><input type="text" value="0"/><input type="text" value="1"/><br/>
 	<button onclick="TranslateWorld2D()">Apply Translation</button>
+	<h4>Rotation Matrix</h4>
+	<label>Alpha:</label><input id="RotationAlpha" type="text" style="background-color: yellow;" value="a"/><br/>
+	<input id="Rotation00" type="text" value="cos(a)"/><input id="Rotation01" type="text" value="-sin(a)"/><input type="text" value="0"/><br/>
+	<input id="Rotation10" type="text" value="sin(a)"/><input id="Rotation11" type="text" value="cos(a)"/><input type="text" value="0"/><br/>
+	<input type="text" value="0"/><input type="text" value="0"/><input type="text" value="1"/><br/>
+	<button onclick="RotateWorld2D()">Apply Rotation</button>
+	<h4>Scale Matrix</h4>
+	<input id="ScaleA" type="text" style="background-color: yellow;" value="a"/><input type="text" value="0"/><input type="text" value="0"/><br/>
+	<input type="text" value="0"/><input id="ScaleB" style="background-color: yellow;" type="text" value="b"/><input type="text" value="0"/><br/>
+	<input type="text" value="0"/><input type="text" value="0"/><input type="text" value="1"/><br/>
+	<button onclick="ScaleWorld2D()">Apply Scale</button>
 	<button onclick="CreateLine()">Draw</button>
 	<script type="text/javascript">var Elements = [];</script>
 	<script type="text/javascript" src="Point.js"></script>
@@ -26,6 +37,8 @@
 	<script type="text/javascript" src="Polygon.js"></script>
 	<script type="text/javascript" src="PolygonSample.js"></script>
 	<script type="text/javascript" src="Translation.js"></script>
+	<script type="text/javascript" src="Rotation.js"></script>
+	<script type="text/javascript" src="Scale.js"></script>
 	<script type="text/javascript">
 		var context = document.getElementById("ViewPort").getContext("2d");
 		for (var i = 0; i < Elements.length; i++) {
